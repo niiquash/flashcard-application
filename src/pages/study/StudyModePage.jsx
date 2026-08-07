@@ -1,7 +1,8 @@
 import "./StudyModePage.css";
+import StudyCard from "../../components/StudyCard/StudyCard";
 
 const StudyModePage = () => {
-  return <div>Study Mode Page</div>;
+  return <StudyCard />;
 };
 
 export default StudyModePage;
