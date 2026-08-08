@@ -1,0 +1,4 @@
+.app {
+  padding: var(--spacing-200) var(--spacing-200) var(--spacing-500)
+    var(--spacing-200);
+}

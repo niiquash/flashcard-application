@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
+  /* padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200); */
 }
 
 .app-header__nav-links {

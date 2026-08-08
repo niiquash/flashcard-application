@@ -6,12 +6,14 @@ import AllCardsPage from "./pages/cards/AllCardsPage";
 
 function App() {
   return (
-    <Routes>
-      <Route element={<AppLayout />}>
-        <Route path="/study" element={<StudyModePage />} />
-        <Route path="/cards" element={<AllCardsPage />} />
-      </Route>
-    </Routes>
+    <div className="app">
+      <Routes>
+        <Route element={<AppLayout />}>
+          <Route path="/study" element={<StudyModePage />} />
+          <Route path="/cards" element={<AllCardsPage />} />
+        </Route>
+      </Routes>
+    </div>
   );
 }
 
