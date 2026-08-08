@@ -18,67 +18,20 @@ const CategoriesFilter = () => {
         All Categories
         <img src={DropdownIcon} alt="Dropdown" />
       </button>
-      <ul className="categories-filter__options">
+      <ul
+        className={
+          isFilterOptionsVisible
+            ? "categories-filter__options"
+            : "categories-filter__options categories-filter__options--hidden"
+        }
+      >
         <li className="categories-filter__option">
           <label>
             <input type="checkbox" />
             Art (1)
           </label>
         </li>
-        <li className="categories-filter__option">
-          <label>
-            <input type="checkbox" />
-            CSS (6)
-          </label>
-        </li>
-        <li className="categories-filter__option">
-          <label>
-            <input type="checkbox" />
-            Geography (4)
-          </label>
-        </li>
-        <li className="categories-filter__option">
-          <label>
-            <input type="checkbox" />
-            History (1)
-          </label>
-        </li>
-        <li className="categories-filter__option">
-          <label>
-            <input type="checkbox" />
-            HTML (3)
-          </label>
-        </li>
-        <li className="categories-filter__option">
-          <label>
-            <input type="checkbox" />
-            JavaScript (14)
-          </label>
-        </li>
-        <li className="categories-filter__option">
-          <label>
-            <input type="checkbox" />
-            Literature (1)
-          </label>
-        </li>
-        <li className="categories-filter__option">
-          <label>
-            <input type="checkbox" />
-            Mathematics (1)
-          </label>
-        </li>
-        <li className="categories-filter__option">
-          <label>
-            <input type="checkbox" />
-            Programming Concepts (1)
-          </label>
-        </li>
-        <li className="categories-filter__option">
-          <label>
-            <input type="checkbox" />
-            Science (3)
-          </label>
-        </li>
+
         <li className="categories-filter__option">
           <label>
             <input type="checkbox" />

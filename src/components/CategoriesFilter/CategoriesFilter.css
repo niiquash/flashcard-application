@@ -1,3 +1,94 @@
 .categories-filter {
   position: relative;
 }
+
+.categories-filter__button {
+  border: 1px solid var(--color-neutral-900);
+  border-radius: var(--radius-full);
+  padding: var(--spacing-150) var(--spacing-200);
+
+  background-color: var(--color-neutral-0);
+  color: var(--color-neutral-900);
+
+  font-size: var(--font-size-16);
+  font-weight: 500;
+  line-height: var(--line-height-120);
+  letter-spacing: var(--letter-spacing-normal);
+
+  display: flex;
+  gap: 8px;
+
+  cursor: pointer;
+  transition: all ease-in 0.05s;
+}
+
+.categories-filter__button:hover {
+  background-color: var(--color-neutral-100);
+}
+
+.categories-filter__options {
+  list-style: none;
+  min-width: 260px;
+  border: 1px solid var(--color-neutral-900);
+  border-radius: var(--radius-8);
+
+  background-color: var(--color-neutral-0);
+  box-shadow: 0 3px 8px 0 #2e140133;
+
+  overflow: hidden;
+  position: absolute;
+  top: 110%;
+}
+
+.categories-filter__options--hidden {
+  display: none;
+}
+
+.categories-filter__option {
+  border-bottom: 1px solid var(--color-neutral-900);
+  padding: var(--spacing-125) var(--spacing-150);
+
+  font-size: var(--font-size-14);
+  font-weight: 500;
+  line-height: var(--line-height-140);
+  letter-spacing: var(--letter-spacing-normal);
+
+  transition: all ease-in 0.05s;
+}
+
+.categories-filter__option:last-child {
+  border-bottom: none;
+}
+
+.categories-filter__option:hover {
+  background-color: var(--color-neutral-100);
+}
+
+.categories-filter__option label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+}
+
+.categories-filter__option input[type="checkbox"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-neutral-900);
+  border-radius: var(--radius-4);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.categories-filter__option input[type="checkbox"]:hover {
+  box-shadow: 1px 1px var(--color-neutral-900);
+}
+
+.categories-filter__option input[type="checkbox"]:checked {
+  background-color: var(--color-yellow-500);
+  background-image: url("../../assets/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.6rem;
+}
