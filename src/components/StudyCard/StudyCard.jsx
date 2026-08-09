@@ -3,6 +3,8 @@ import ShuffleIcon from "../../assets/icon-shuffle.svg";
 import ChevronLeftIcon from "../../assets/icon-chevron-left.svg";
 import ChevronRightIcon from "../../assets/icon-chevron-right.svg";
 import CategoriesFilter from "../CategoriesFilter/CategoriesFilter";
+import ResetProgressIcon from "../../assets/icon-reset.svg";
+import CheckmarkIcon from "../../assets/icon-check.svg";
 
 const StudyCard = () => {
   return (
@@ -20,7 +22,21 @@ const StudyCard = () => {
           Shuffle
         </button>
       </div>
-      <div></div>
+      <div className="flashcard">
+        <div className="flashcard__front-back-buttons">
+          <div className="flashcard__front">Card Front</div>
+          <div className="flashcard__back">Card Back</div>
+          <div className="flashcard__buttons">
+            <button className="flashcard__button--know">
+              <img src={CheckmarkIcon} alt="checkmark icon" />I Know This
+            </button>
+            <button className="flashcard__button--reset">
+              <img src={ResetProgressIcon} alt="reset icon" />
+              Reset Progress
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="card-controls__pagination">
         <div className="card-controls__pagination--buttons-and-card-number">
           <button className="card-controls__pagination--previous">
