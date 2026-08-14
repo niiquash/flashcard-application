@@ -5,6 +5,9 @@ import ChevronRightIcon from "../../assets/icon-chevron-right.svg";
 import CategoriesFilter from "../CategoriesFilter/CategoriesFilter";
 import ResetProgressIcon from "../../assets/icon-reset.svg";
 import CheckmarkIcon from "../../assets/icon-check.svg";
+import BlueStar from "../../assets/pattern-star-blue.svg";
+import PinkStar from "../../assets/pattern-star-pink.svg";
+import YellowStar from "../../assets/pattern-star-yellow.svg";
 
 const StudyCard = () => {
   return (
@@ -24,8 +27,46 @@ const StudyCard = () => {
       </div>
       <div className="flashcard">
         <div className="flashcard__front-back-buttons">
-          <div className="flashcard__front">Card Front</div>
-          <div className="flashcard__back">Card Back</div>
+          <div className="flashcard__front">
+            <div className="top-right-star">
+              <img src={BlueStar} alt="" />
+            </div>
+            <div className="bottom-left-star">
+              <img src={YellowStar} alt="" />
+            </div>
+            <section className="flashcard__front--content">
+              <h1>Web Development</h1>
+              <article>
+                <h2>what does HTML stand for?</h2>
+                <p>Click to reveal answer</p>
+              </article>
+              <div className="progress-bar-container">
+                <div className="progress-bar">
+                  <div className="progress-bar__fill"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div className="flashcard__back">
+            <div className="top-right-star">
+              <img src={PinkStar} alt="" />
+            </div>
+            <div className="bottom-left-star">
+              <img src={YellowStar} alt="" />
+            </div>
+            <section className="flashcard__front--content">
+              <h1>Web Development</h1>
+              <article>
+                <h2>Answer:</h2>
+                <p>HyperText Markup Language</p>
+              </article>
+              <div className="progress-bar-container">
+                <div className="progress-bar">
+                  <div className="progress-bar__fill"></div>
+                </div>
+              </div>
+            </section>
+          </div>
           <div className="flashcard__buttons">
             <button className="flashcard__button--know">
               <img src={CheckmarkIcon} alt="checkmark icon" />I Know This
