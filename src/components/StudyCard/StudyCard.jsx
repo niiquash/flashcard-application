@@ -37,13 +37,14 @@ const StudyCard = () => {
             <section className="flashcard__front--content">
               <h1>Web Development</h1>
               <article>
-                <h2>what does HTML stand for?</h2>
+                <h2>What does HTML stand for?</h2>
                 <p>Click to reveal answer</p>
               </article>
               <div className="progress-bar-container">
                 <div className="progress-bar">
                   <div className="progress-bar__fill"></div>
                 </div>
+                <span>0/5</span>
               </div>
             </section>
           </div>
@@ -54,7 +55,7 @@ const StudyCard = () => {
             <div className="bottom-left-star">
               <img src={YellowStar} alt="" />
             </div>
-            <section className="flashcard__front--content">
+            <section className="flashcard__back--content">
               <h1>Web Development</h1>
               <article>
                 <h2>Answer:</h2>
@@ -64,6 +65,7 @@ const StudyCard = () => {
                 <div className="progress-bar">
                   <div className="progress-bar__fill"></div>
                 </div>
+                <span>0/5</span>
               </div>
             </section>
           </div>

@@ -125,11 +125,13 @@
 /* =========================
    Flashcard Content
 ===========================*/
-.flashcard__front--content {
+.flashcard__front--content,
+.flashcard__back--content {
   text-align: center;
 }
 
-.flashcard__front--content h1 {
+.flashcard__front--content h1,
+.flashcard__back--content h1 {
   display: inline-block;
   padding: var(--spacing-75) var(--spacing-150);
 
@@ -146,14 +148,74 @@
   margin-bottom: var(--spacing-100);
 }
 
-.flashcard__front--content article {
+.flashcard__front--content article,
+.flashcard__back--content article {
   margin-top: var(--spacing-1000);
 }
+
+.flashcard__front--content article h2 {
+  font-size: var(--font-size-24);
+  font-weight: 700;
+  line-height: var(--line-height-120);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.flashcard__back--content article h2 {
+  font-size: var(--font-size-16);
+  font-weight: 500;
+  line-height: var(--line-height-120);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.flashcard__front--content article p {
+  font-size: var(--font-size-16);
+  font-weight: 500;
+  line-height: var(--line-height-120);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.flashcard__back--content article p {
+  font-size: var(--font-size-24);
+  font-weight: 700;
+  line-height: var(--line-height-120);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.progress-bar-container {
+  margin-top: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-100);
+}
+
+.progress-bar {
+  width: var(--spacing-800);
+  height: var(--spacing-100);
+
+  border: 1px solid var(--color-neutral-900);
+  border-radius: var(--radius-full);
+
+  background-color: var(--color-neutral-0);
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  background-color: var(--color-neutral-900);
+  border-radius: var(--radius-full);
+  height: 100%;
+  width: 80%;
+}
+
+/* ===============================
+   Flashcard Buttons
+=================================*/
 
 .flashcard__buttons {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-150);
+  margin-top: var(--spacing-250);
 }
 
 .flashcard__front {
