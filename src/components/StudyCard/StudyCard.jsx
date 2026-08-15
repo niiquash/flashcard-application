@@ -8,8 +8,16 @@ import CheckmarkIcon from "../../assets/icon-check.svg";
 import BlueStar from "../../assets/pattern-star-blue.svg";
 import PinkStar from "../../assets/pattern-star-pink.svg";
 import YellowStar from "../../assets/pattern-star-yellow.svg";
+import { useState } from "react";
 
 const StudyCard = () => {
+  const [isQuestionDisplayed, setIsQuestionDisplayed] = useState(true);
+  const [isAnswerDisplayed, setIsAnswerDisplayed] = useState(false);
+
+  function toggleQuestionAnswer() {
+    setIsQuestionDisplayed(!isQuestionDisplayed);
+    setIsAnswerDisplayed(!isAnswerDisplayed);
+  }
   return (
     <section className="study-card">
       <div className="card-controls">
@@ -27,7 +35,10 @@ const StudyCard = () => {
       </div>
       <div className="flashcard">
         <div className="flashcard__front-back-buttons">
-          <div className="flashcard__front">
+          <div
+            className={`flashcard__front ${isQuestionDisplayed ? "show" : ""}`}
+            onClick={toggleQuestionAnswer}
+          >
             <div className="top-right-star">
               <img src={BlueStar} alt="" />
             </div>
@@ -48,7 +59,10 @@ const StudyCard = () => {
               </div>
             </section>
           </div>
-          <div className="flashcard__back">
+          <div
+            className={`flashcard__back ${isAnswerDisplayed ? "show" : ""}`}
+            onClick={toggleQuestionAnswer}
+          >
             <div className="top-right-star">
               <img src={PinkStar} alt="" />
             </div>
